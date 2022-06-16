@@ -1,14 +1,14 @@
 {% extends "layout.html" %}
 {% block content %}
 <div class="container-login">
-    <div class="bg-secondary" style="background-color: white; width: 430px; height: 430px; margin: 90px auto">
-        <h1 class="text-center"> Smart Irrigation</h1>
+    <div style="background-color: white; width: 430px; min-height: 430px; margin: 90px auto">
+        <h1 class="text-center"> Smart Irrigation </h1>
             <hr>
         <div style="position: relative; width: 350px; height: 320px; margin: auto auto">
             <form method="POST" action="">
             {{ form.hidden_tag() }}
             <fieldset class="form-group">
-                <legend class="border-bottom mb-4 text-center">Log In</legend>
+                <legend class="border-bottom mb-4">Log In</legend>
                 <div class="form-group">
                     {{ form.email.label(class="form-control-label") }}
                     {% if form.email.errors %}
@@ -47,6 +47,9 @@
                 </small>
             </div>
         </form>
+        <small class="text-muted">
+            Need An Account? <a class="ml-2" href="{{ url_for('register') }}">Sign Up Now</a>
+        </small>
         </div>
     </div>
 </div>

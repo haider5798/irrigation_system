@@ -1,14 +1,13 @@
 {% extends "layout.html" %}
 {% block content %}
- <section class="page-section" id="services">
-    <div class="container page-section bg-secondary">
-        <div class="text-center">
-            <h2 class="section-heading text-uppercase">Services</h2>
-            <h3 class="section-subheading text-muted">Smart Irrigation System Web portal.</h3>
-        </div>
-        <div class="content-section">
-           <form method="POST" action="">
-        {{ form.hidden_tag() }}
+    <section class="page-section" id="services">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="section-heading text-uppercase">Services</h2>
+                <h3 class="section-subheading text-muted">Smart Irrigation System Web portal.</h3>
+            </div>
+            <form method="POST" action="">
+            {{ form.hidden_tag() }}
             <fieldset class="form-group">
                 <legend class="border-bottom mb-4 h2 text-center">Find Time to Release Water</legend>
                 <div class="form-group">
@@ -71,7 +70,7 @@
             <div class="form-group">
                 {{ form.submit(class="btn btn-outline-info") }}
             </div>
-            <fieldset class="form-group">
+            <fieldset>
                 <div class="form-group">
                     {{ form.answer.label(class="form-control-label") }}
 
@@ -90,7 +89,6 @@
             </fieldset>
         </form>
         </div>
-    </div>
- </section>
+    </section>
 
 {% endblock content %}

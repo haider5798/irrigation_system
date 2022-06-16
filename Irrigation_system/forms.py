@@ -62,7 +62,7 @@ class PlantSearchForm(FlaskForm):
     humidity = StringField('Humidity', validators=[DataRequired()])
     soil_moisture = StringField('Soil Moisture', validators=[DataRequired()])
     answer = TextAreaField('Answer')
-    submit = SubmitField('Submit')
+    submit = SubmitField('Search')
 
 
 class RequestResetForm(FlaskForm):
